@@ -43,7 +43,7 @@ export async function fetchModel(url) {
         id: p._id,
         userId: p.user_id,
         createdDate: p.date_time,
-        imageUrl: `/images/${p.file_name}`,
+        imageUrl: `http://localhost:8081/images/${p.file_name}`,
         file_name: p.file_name,
         comments: (p.comments || []).map(c => {
           if (c.user) {

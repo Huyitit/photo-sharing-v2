@@ -10,6 +10,7 @@ dbConnect();
 
 app.use(cors());
 app.use(express.json());
+app.use("/images", express.static("images"));
 app.use("/api/user", UserRouter);
 app.use("/api/photosOfUser", PhotoRouter);
 
